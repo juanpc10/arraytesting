@@ -1,10 +1,8 @@
 \m4_TLV_version 1d: tl-x.org
 \SV
-
 // Hello world from dev
 m4_makerchip_module
 m4_include_url(['https://raw.githubusercontent.com/stevehoover/tlv_flow_lib/221c93b3603bb4c72d3b024b3ec410e48f60e199/arrays.tlv'])
-
 \TLV
    //$reset = *reset;
 
@@ -19,7 +17,6 @@ m4_include_url(['https://raw.githubusercontent.com/stevehoover/tlv_flow_lib/221c
       @0
          // The array hierarchy (to declare ranges)
          /M4_ENTRY_HIER
-         
          m4_rand($wr_en, 0, 0)
          ?$wr_en
             m4_rand($entry, M4_ENTRY_INDEX_MAX, 0)  // entry to write into
@@ -29,8 +26,6 @@ m4_include_url(['https://raw.githubusercontent.com/stevehoover/tlv_flow_lib/221c
          m4_rand($rd_en, 0, 0)
          ?$rd_en
             m4_rand($entry, M4_ENTRY_INDEX_MAX, 0)  // entry to read from
-         
-   
    //----------------------------------------------------
    // The array
 
